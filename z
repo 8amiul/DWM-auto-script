@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Scripts for compiling suckless tools.
+
+cd ~/wm/dwmold
+sudo make clean install
+cd ../st
+sudo make clean install
+cd ../slstatus
+sudo make clean install
+cd ../dmenu
+sudo make clean install
+clear
