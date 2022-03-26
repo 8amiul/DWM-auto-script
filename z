@@ -11,3 +11,16 @@ sudo make clean install
 cd ../dmenu
 sudo make clean install
 clear
+
+#Pywal Discord
+pywal-discord -t default
+#pywal-telegram
+wal-telegram --wal
+sleep 1
+#unzip ~/.cache/wal-telegram/wal.tdesktop-theme
+
+
+#Changing firefox background to wallpaper
+url=$(awk '/--wallpaper:/ {print($2)}' ~/.cache/wal/colors.css)
+sed -E -i '/background:/s#(background: .* )url\([^)]*\)(.*;)#\1'"${url%;}"'\2#'  /home/samiul/.mozilla/firefox/t9t6ajim.default-release/chrome/userContent.css
+
